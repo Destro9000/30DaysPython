@@ -92,3 +92,4 @@ euclideanDistance1 = abs(2-3)
 euclideanDistance2 = abs(10-8)
 
 
+hello = 123
