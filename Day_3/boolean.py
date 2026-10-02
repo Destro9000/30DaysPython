@@ -103,3 +103,36 @@ x = int(input("Enter the x value: "))
 y = x**2 + 6*x + 9
 
 
+print(not len('python') == len('dragon')) #false
+print("on" in "python")
+print("on" in "dragon")
+
+sentence = " I hope this course is not full of jargon"
+
+print("jargon" in sentence)
+
+print('There is no on in dragon or python', not "on" in "dragon")
+
+
+python = "python"
+len_python = float(len(python))
+string_len = str(len_python)
+
+print('The length of the python word in fload is:', string_len)
+
+
+number = int(input("Enter the number you want to evaluate"))
+
+print("is the number even?", number%2 == 0)
+print(7//3 == int(2.7))
+print(type("10") == type(10))
+print(10 == int(9.8))
+
+hours = int(input('Enter the hours: '))
+rate = int(input('Enter the rate per hour: '))
+earnings = hours * rate
+print("Your weekly earning are: ", earnings)
+
+years = int(input("Enter the number of years you have lived: "))
+total_in_seconds = 365 * 24 * 60 * years * 60
+print("You lived a total of ", total_in_seconds, " seconds")
