@@ -37,7 +37,7 @@ Exercise: Level 3
     Find an Euclidean distance between (2, 3) and (10, 8)
 """
 
-print(versi)
+
 
 num = 3 
 num2 = 4
