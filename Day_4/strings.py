@@ -110,3 +110,26 @@ print('You cannot end a sentence with because because because is a conjunction'.
 print(company.startswith("Coding"))
 print(company.endswith("coding"))
 print('   Coding For All      '.strip())
+
+print('30DaysOfPython'.isidentifier())
+print('thirty_days_of_python'.isidentifier())
+
+list = ['Django', 'Flask', 'Bottle', 'Pyramid', 'Falcon']
+print(' '.join(list))
+
+print('I am enjoying this challenge.\nI just wonder what is next.')
+print('Name\t  Age\t  Country\t  City\nAsabeneh  250\t  Finland\t  Helsinki')
+
+radius = 14
+area = 3.14 * radius ** 2
+print(f'The area of a circle with radius {radius} is {area} meters square.')
+
+a = 8
+b = 6
+print(f'{a} + {b} = {a +b}')
+print(f'{a} - {b} = {a - b}')
+print(f'{a} * {b} = {a * b}')
+print(f'{a} / {b} = {a / b:.2f}')
+print(f'{a} % {b} = {a % b}')
+print(f'{a} // {b} = {a // b}')
+print(f'{a} ** {b} = {a ** b}')
