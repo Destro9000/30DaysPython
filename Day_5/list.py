@@ -149,3 +149,5 @@ print(ch)
 print(rus)
 print(us)
 print(*scan)
+
+
