@@ -170,3 +170,6 @@ if 'skills' in person:
   print(person['skills'][round(len(person['skills']) / 2)])
   print('Python' in person['skills'])
   
+if person['is_married'] ==  True and person['country'] == 'Finland':
+  print(f'{person["first_name"]} {person["last_name"]} lives in Finland. He is married.')
+  
