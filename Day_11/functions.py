@@ -75,7 +75,7 @@ Exercises: Level 3
     Create a function called the most_spoken_languages in the world. It should return 10 or 20 most spoken languages in the world in descending order
     Create a function called the most_populated_countries. It should return 10 or 20 most populated countries in descending order.
 '''
-
+import math
 # ____Exercise 1_____
 
 def add_two_numbers(num1, num2):
@@ -235,3 +235,51 @@ def greet(user = 'Guest'):
 
 print(greet())
 print(greet('Diana'))
+
+
+def calculate_mean(list):
+  sum = 0
+  for item in list:
+    if(type(item) == int or type(item) == float):
+      sum += item
+    
+  return sum/len(list)
+
+print(calculate_mean([1,2,3,4,5]))
+
+def calculate_mode(list):
+  pass
+def calculate_median(list):
+  list.sort()
+  if len(list)%2 == 0:
+    return f'The median is {(list[round(len(list)/2)] + list[round((len(list)/2)) - 1]) / 2 }'
+  else:
+    return f'The median is {list[round(len(list)/2)]}'
+
+print(calculate_median([1,2,3,4,5,6]))
+
+def calculate_range(list):
+  maximum = max(list)
+  minimum = min(list)
+  
+  return f'The range is {maximum-minimum}'
+
+print(calculate_range([1,2,3,4,5]))
+
+def calculate_variance(list):
+  mean = calculate_mean(list)
+  sum = 0
+  for i in list:
+    sum += (i-mean)**2
+  return  sum/(len(list)-1)
+print(calculate_variance([1,2,3,4,5]))
+def calculate_std(list):
+  variance = calculate_variance(list)
+  return f'The standard deviation is {math.sqrt(variance)}'
+
+
+def show_args(**args):
+
+  formatted = ", ".join(f"{key}: {value}" for key, value in args.items())
+  print(f"Received: {formatted}")
+    
