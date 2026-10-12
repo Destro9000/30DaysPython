@@ -283,3 +283,38 @@ def show_args(**args):
   formatted = ", ".join(f"{key}: {value}" for key, value in args.items())
   print(f"Received: {formatted}")
     
+    
+
+def is_prime(number):
+  i = 1
+  is_prime = True
+  while i <= number:
+    if number % i == 0 and i != 1 and i!=number:
+      is_prime = False
+    i += 1  
+  
+  return 'Prime' if is_prime else 'Not Prime'
+      
+print(is_prime(11))
+
+def is_unique(list):
+  for item in list:
+    if(list.count(item) > 1):
+      return 'The list does not contain unique items'
+  
+  return 'The list contain unique items'
+
+print(is_unique([1,2,3]))
+
+def same_type(list):
+  i = 0
+  
+  while i < len(list) - 1:
+    if type(list[i]) != type(list[i+1]):
+      return 'Not the same type'
+    
+    i += 1
+  
+  return 'Same type'
+
+print(same_type([1,1,1,'hello']))
