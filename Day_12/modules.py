@@ -46,8 +46,8 @@ Exercises: Level 3
 #____Exercise 1_____
 
 
-from random import choice, choices, randint ,shuffle, sample
-
+from random import choice, choices, randint ,shuffle, sample, random, uniform
+import string
 # Pool of characters an ID can be built from: a-z, A-Z and 0-9
 CHARACTERS = string.ascii_letters + string.digits
 CHARACTERS_2 = '0123456789ABCDEF'
@@ -101,3 +101,7 @@ print(generate_colors('h', 4))
 def shuffle_list(lst):
   return sample(lst, len(lst))
 
+def seven_rand_numbers():
+  return list({round(random()*10, 2) for _ in range(7)})
+
+print(seven_rand_numbers())
