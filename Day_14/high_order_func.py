@@ -34,6 +34,15 @@ Exercises: Level 3
         Sort out the ten most spoken languages by location.
         Sort out the ten most populated countries.
 '''
+from functools import reduce
+import sys
+from pathlib import Path
+
+# data/countries.py lives one folder up from this file (Day_14),
+# so add the project root to sys.path before importing it
+sys.path.append(str(Path(__file__).resolve().parent.parent))
+
+from data.countries import countries as all_countries
 
 countries = ['Estonia', 'Finland', 'Sweden', 'Denmark', 'Norway', 'Iceland']
 names = ['Asabeneh', 'Lidiya', 'Ermias', 'Abraham']
@@ -80,13 +89,41 @@ def country_six_and_more(country):
   return True if len(country) >= 6 else  False
 
 def country_start_with_e(country):
-  return True if country.startwith('E') else False
+  return country.startswith('E') 
 
 filtered_countries = list(filter(country_land, countries))
 print(filtered_countries)
-
 filtered_countries2 = list(filter(country_six_chars, countries))
+print(filtered_countries2)
 filtered_countries3 = list(filter(country_six_and_more, countries))
+print(filtered_countries3)
+
 
 countries_3 = list(map(lambda country : country.upper(),filter(country_six_chars, countries)))
 print(countries_3)
+
+def check_string(item):
+  return isinstance(item, str)
+
+def get_string_lists(lst):
+  return list(filter(check_string, lst))
+
+print(get_string_lists(['hello', 2, 2, [1,2,3]]))
+
+
+def add_2_numbers(x,y):
+  return int(x) + int(y)
+  
+number =reduce(lambda x,y : x + y , numbers)
+print(number)
+
+
+
+string_countries = reduce(lambda a,b : f'{a}+{b}', countries[:-1]) + f'and {countries[-1]} are scandinavian countries'
+
+patterns = ('land', 'ia', 'island', 'stan')
+  
+def categorize_countries(countries):
+  return [country for country in all_countries if any( p in country for p in patterns )]
+
+
