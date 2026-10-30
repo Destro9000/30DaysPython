@@ -323,7 +323,7 @@ print(countries[:1])  # we sliced only the first country, remove the slicing to 
                    'pt': 'Afeganistão'}}]
 ```
 
-We use _json()_ method from response object, if the we are fetching JSON data. For txt, html, xml and other file formats we can use _text_.
+We use _json()_ method from response object, if we are fetching JSON data. For txt, html, xml and other file formats we can use _text_.
 
 ### Creating a Package
 
